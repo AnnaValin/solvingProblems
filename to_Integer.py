@@ -9,7 +9,6 @@ def char_to_int(value):
 
 def to_integer(value):
         num = ""
-        x = 0
 
         if char_to_int(value) != -1:
                 return int(value)
@@ -19,11 +18,11 @@ def to_integer(value):
                         if char_to_int(value[i]) != -1:
                                 num += value[i]
                         else: break
-                return num
+                return int(num)
         elif char_to_int(value[0]) != -1:
                 for i in value:
                         if char_to_int(i) != -1:
                                 num += i
                         else: break
-                return num
+                return int(num)
         else: return 0
